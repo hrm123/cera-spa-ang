@@ -1,1 +1,16 @@
-Hello world !
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+<head>
+    <meta charset="uft-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>My first angularjs app</title>
+</head>
+<body>
+    <h1>My first angular js app</h1>
+    <div ng-controller="myFirstController">
+        <p>{{sayHello() + name}}</p>
+        <input type="text" ng-model="name" />
+    </div>
+</body>
+</html>
