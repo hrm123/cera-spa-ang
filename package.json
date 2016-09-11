@@ -1,0 +1,22 @@
+{
+  "name": "cera-spa-ang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrm123/cera-spa-ang.git"
+  },
+  "author": "Rammohan Holagundi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrm123/cera-spa-ang/issues"
+  },
+  "homepage": "https://github.com/hrm123/cera-spa-ang#readme",
+  "dependencies": {
+    "browser-sync": "^2.15.0"
+  }
+}
