@@ -9,6 +9,7 @@
         $scope.msgSuccessClass = "label label-success";
         $scope.msg="";
         $scope.msgClass = $scope.msgSuccessClass;
+        $scope.msgs = {};
         $scope.msgs.enterData = "Please enter data first";
         $scope.msgs.manyItems = "Too much!";
         $scope.msgs.success = "Enjoy!";
