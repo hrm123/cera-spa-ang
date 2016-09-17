@@ -39,7 +39,7 @@
             else{
                 $scope.showMsg = true;
                 $scope.msgClass = $scope.msgErrorClass;
-                $scope.msg=$scope.msgs.success;
+                $scope.msg=$scope.msgs.msgSuccessClass;
                 return;                
             }
             
