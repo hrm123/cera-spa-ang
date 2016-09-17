@@ -38,8 +38,8 @@
             }
             else{
                 $scope.showMsg = true;
-                $scope.msgClass = $scope.msgErrorClass;
                 $scope.msg=$scope.msgs.msgSuccessClass;
+                $scope.msg=$scope.msgs.success;
                 return;                
             }
             
