@@ -34,6 +34,7 @@
         buy.itemBought = function(item)
         {
             ShoppingListCheckOffService.BoughtItem(item);
+            buy.ItemList = ShoppingListCheckOffService.ToBuy;
         };
         
     }
