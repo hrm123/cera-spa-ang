@@ -43,7 +43,7 @@
      <ul>
        <li ng-repeat="item in bought.ItemList">Bought {{item.quantity}} {{item.name}}</li>
      </ul>
-     <div class="emptyMessage">Nothing bought yet.</div>
+     <div class="emptyMessage" ng-if="bought.ItemList.length === 0">Nothing bought yet.</div>
     </div>
   </div>
 </div>
