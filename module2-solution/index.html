@@ -29,7 +29,7 @@
   <div class="row">
 
     <!-- To Buy List -->
-    <div class="col-md-6" ng-controller="ToBuyShoppingCtrl as buy">
+    <div class="col-md-6" ng-controller="ToBuyShoppingController as buy">
      <h2>To Buy:</h2>
      <ul>
        <li ng-repeat="item in buy.ItemList">Buy {{item.quantity}} {{item.name}} <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller="AlreadyBoughtShoppingCtrl as bought">
+    <div class="col-md-6" ng-controller="AlreadyBoughtShoppingController as bought">
      <h2>Already Bought:</h2>
      <ul>
        <li ng-repeat="item in bought.ItemList">Bought {{item.quantity}} {{item.name}}</li>

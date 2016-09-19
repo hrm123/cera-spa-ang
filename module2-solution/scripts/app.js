@@ -21,12 +21,12 @@
             svc.AlreadyBought.push(item);
         }
         
-    };
+    }
     
     function AlreadyBoughtShoppingCtrl(ShoppingListCheckOffService){
         var bought = this;
         bought.ItemList = ShoppingListCheckOffService.AlreadyBought;
-    };
+    }
     
     function ToBuyShoppingCtrl(ShoppingListCheckOffService){
         var buy = this;
@@ -36,7 +36,7 @@
             ShoppingListCheckOffService.BoughtItem(item);
         };
         
-    };
+    }
     
     ToBuyShoppingCtrl.$inject = ["ShoppingListCheckOffService"];
     AlreadyBoughtShoppingCtrl.$inject = ["ShoppingListCheckOffService"];
