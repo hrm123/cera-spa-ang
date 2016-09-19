@@ -3,10 +3,8 @@
     var app = angular.module('MyShoppingListApp',[]);
     app.controller("ToBuyShoppingController ", ToBuyShoppingCtrl)
     app.controller("AlreadyBoughtShoppingController ", AlreadyBoughtShoppingCtrl);
-    app.service("ShoppingListCheckOffService", ShoppingListCheckOffSvc)
+    app.service("ShoppingListCheckOffService", ShoppingListCheckOffSvc);
     
-    ToBuyShoppingCtrl.$inject = ["ShoppingListCheckOffService"];
-    AlreadyBoughtShoppingCtrl.$inject = ["ShoppingListCheckOffService"];
     
     function ShoppingListCheckOffSvc(){
         this.ToBuy = [{ name: "Cookies", quantity: 10 },{ name: "Biscuit", quantity: 11 },
@@ -20,12 +18,12 @@
             this.AlreadyBought.push(item);
         }
         
-    }
+    };
     
     function AlreadyBoughtShoppingCtrl(ShoppingListCheckOffService){
         var bought = this;
         bought.ItemList = ShoppingListCheckOffService.AlreadyBought;
-    }
+    };
     
     function ToBuyShoppingCtrl(ShoppingListCheckOffService){
         var buy = this;
@@ -35,5 +33,8 @@
             ShoppingListCheckOffService.BoughtItem(item);
         };
         
-    }
+    };
+    
+    ToBuyShoppingCtrl.$inject = ["ShoppingListCheckOffService"];
+    AlreadyBoughtShoppingCtrl.$inject = ["ShoppingListCheckOffService"];
 })();
