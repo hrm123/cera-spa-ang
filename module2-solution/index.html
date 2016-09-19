@@ -32,7 +32,7 @@
     <div class="col-md-6" ng-controller="ToBuyShoppingController as buy">
      <h2>To Buy:</h2>
      <ul>
-       <li ng-repeat="item in buy.ItemList">Buy {{item.quantity}} {{item.name}} <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+       <li ng-repeat="item in buy.ItemList">Buy {{item.quantity}} {{item.name}} <button class="btn btn-default" ng-click="buy.itemBought(item)"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
      <div class="emptyMessage" ng-if="buy.ItemList.length === 0">Everything is bought!</div>
     </div>
