@@ -1,9 +1,9 @@
 (function(){
     'use strict';
     var app = angular.module('MyShoppingListApp',[]);
-    app.controller("ToBuyShoppingController ", ToBuyShoppingCtrl);
-    app.controller("AlreadyBoughtShoppingController ", AlreadyBoughtShoppingCtrl);
-    app.service("ShoppingListCheckOffService", ShoppingListCheckOffSvc);
+    app.controller('ToBuyShoppingController', ToBuyShoppingCtrl);
+    app.controller('AlreadyBoughtShoppingController', AlreadyBoughtShoppingCtrl);
+    app.service('ShoppingListCheckOffService', ShoppingListCheckOffSvc);
     
     function ShoppingListCheckOffSvc(){
         var svc = this;
@@ -38,6 +38,6 @@
         
     }
     
-    ToBuyShoppingCtrl.$inject = ["ShoppingListCheckOffService"];
-    AlreadyBoughtShoppingCtrl.$inject = ["ShoppingListCheckOffService"];
+    ToBuyShoppingCtrl.$inject = ['ShoppingListCheckOffService'];
+    AlreadyBoughtShoppingCtrl.$inject = ['ShoppingListCheckOffService'];
 })();
