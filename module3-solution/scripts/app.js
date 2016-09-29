@@ -9,9 +9,13 @@
         var ddo = {
             scope:{
                 itemsFound:"<",
-                onRemove:"&"
+                onRemove:"&",
+                msg:"<"
             },
-            template:"<ul> <li ng-repeat='item in foundItems'> {{item.description}} </li>  </ul>"
+            template:"<ul> <li ng-repeat='item in foundItems'> {{item.description}} </li>  </ul>{{msg}}",
+            controller: function($scope){
+                $scope.msg="";
+            }
         }
         return ddo;
     }
@@ -22,9 +26,22 @@
         var ctrl = this;
         ctrl.foundItems = [];
         ctrl.searchTerm = '';
+        ctrl.msg = "";
         
         ctrl.loadItems = function(){
+            debugger;
+            ctrl.foundItems = [];
+            if(ctrl.searchTerm === null || ctrl.searchTerm.trim().length === 0)
+            {
+                ctrl.msg = "Nothing found";
+                return;
+            }
             ctrl.foundItems = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
+            if(ctrl.foundItems.length === 0)
+            {
+                ctrl.msg = "Nothing found";
+            }
+            
         }
         
         ctrl.removeItem = function(itemIndex){
@@ -41,6 +58,7 @@
             return $http('https://davids-restaurant.herokuapp.com/menu_items.json').then(function (result) {
                 // process result and only keep items that match
                 debugger;
+                
                 var foundItems = result.menu_items.filter( function( item ) { return item.description.indexOf(searchTerm) >0; } )
 
                 // return processed items
