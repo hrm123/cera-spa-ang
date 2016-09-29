@@ -12,7 +12,7 @@
                 onRemove:"&",
                 msg:"<"
             },
-            template:"<ul> <li ng-repeat='item in foundItems'> {{item.description}} </li>  </ul> &nbsp;&nbsp;<span class='alert alert-danger fade in'>{{msg}}</span>",
+            template:"<ul> <li ng-repeat='item in foundItems'> {{item.description}} </li>  </ul> &nbsp;&nbsp;<span ng-hide='nidCtrl.msg.length===0' class='alert alert-danger fade in'>{{msg}}</span>",
             controller: function($scope){
                 $scope.msg="";
             }
@@ -55,7 +55,7 @@
                      
         svc.getMatchedMenuItems = function(searchTerm)
         {
-            return $http('https://davids-restaurant.herokuapp.com/menu_items.json').then(function (result) {
+            return $http.get('https://davids-restaurant.herokuapp.com/menu_items.json').then(function (result) {
                 // process result and only keep items that match
                 debugger;
                 
