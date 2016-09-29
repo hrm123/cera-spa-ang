@@ -59,7 +59,7 @@
                 // process result and only keep items that match
                 debugger;
                 
-                var foundItems = result.menu_items.filter( function( item ) { return item.description.indexOf(searchTerm) >0; } )
+                var foundItems = result.data.menu_items.filter( function( item ) { return item.description.indexOf(searchTerm) >0; } )
 
                 // return processed items
                 return foundItems;
