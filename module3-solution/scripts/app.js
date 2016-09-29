@@ -12,7 +12,7 @@
                 onRemove:"&",
                 msg:"<"
             },
-            template:"<ul> <li ng-repeat='item in itemsFound'> item -  {{item.description}} </li>  </ul> &nbsp;&nbsp;<span ng-hide='nidCtrl.msg.length===0' class='alert alert-danger fade in'>{{msg}}</span>",
+            template:"<div class='row' ng-repeat='item in itemsFound'> <div class='col-sm-12'> {{item.name}}, {{item.short_name}} , {{item.description}} </div> </div> <div class='row' ng-hide='nidCtrl.msg.length===0' ><div class='col-sm-12 alert alert-danger fade in'>{{msg}}</div></div>",
             controller: function($scope){
                 debugger;
                 //$scope.msg="";
@@ -26,7 +26,7 @@
     function narrowItDownController(MenuSearchService){
         var ctrl = this;
         ctrl.foundItems = [{
-            descripton: "chicken soup with egg drop and won tons",
+            description: "chicken soup with egg drop and won tons",
             id:881,
             large_portion_name:"quart",
             name:"Egg Drop with Won Ton Soup",
