@@ -14,7 +14,8 @@
             },
             template:"<ul> <li ng-repeat='item in foundItems'> item -  {{item.description}} </li>  </ul> &nbsp;&nbsp;<span ng-hide='nidCtrl.msg.length===0' class='alert alert-danger fade in'>{{msg}}</span>",
             controller: function($scope){
-                $scope.msg="";
+                debugger;
+                //$scope.msg="";
             }
         }
         return ddo;
