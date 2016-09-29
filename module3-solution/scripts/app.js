@@ -46,11 +46,7 @@
                 ctrl.msg = "Nothing found";
                 return;
             }
-            ctrl.foundItems = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
-            if(ctrl.foundItems.length === 0)
-            {
-                ctrl.msg = "Nothing found";
-            }
+            MenuSearchService.getMatchedMenuItems(ctrl.searchTerm).then(function(data) { debugger; ctrl.foundItems = data;});
             
         }
         
