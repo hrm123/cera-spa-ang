@@ -24,7 +24,16 @@
     
     function narrowItDownController(MenuSearchService){
         var ctrl = this;
-        ctrl.foundItems = [];
+        ctrl.foundItems = [{
+            descripton: "chicken soup with egg drop and won tons",
+            id:881,
+            large_portion_name:"quart",
+            name:"Egg Drop with Won Ton Soup",
+            price_large:6,
+            price_small:3,
+            short_name:"A5",
+            small_portion_name:"pint"}
+        ];
         ctrl.searchTerm = '';
         ctrl.msg = "";
         
