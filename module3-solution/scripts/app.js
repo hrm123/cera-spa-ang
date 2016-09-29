@@ -3,7 +3,7 @@
     var app = angular.module('NarrowItDownApp',[]);
     app.controller('NarrowItDownController', narrowItDownController);
     app.factory('MenuSearchService', menuSearchSvc);
-    app.directive("FoundItems", foundItemsWidget);
+    app.directive("foundItems", foundItemsWidget);
     
     function foundItemsWidget(){
         var ddo = {
