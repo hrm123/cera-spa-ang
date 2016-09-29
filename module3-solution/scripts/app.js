@@ -8,7 +8,7 @@
     function foundItemsWidget(){
         var ddo = {
             scope:{
-                foundItems:"<",
+                itemsFound:"<",
                 onRemove:"&"
             },
             template:"<ul> <li ng-repeat='item in foundItems'> {{item.description}} </li>  </ul>"
@@ -24,7 +24,7 @@
         ctrl.searchTerm = '';
         
         ctrl.loadItems = function(){
-            ctrl.foundItmes = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
+            ctrl.foundItems = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
         }
         
         ctrl.removeItem = function(itemIndex){
