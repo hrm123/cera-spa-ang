@@ -12,7 +12,7 @@
                 onRemove:"&",
                 msg:"<"
             },
-            template:"<ul> <li ng-repeat='item in foundItems'> {{item.description}} </li>  </ul>{{msg}}",
+            template:"<ul> <li ng-repeat='item in foundItems'> {{item.description}} </li>  </ul> &nbsp;&nbsp;<span class='alert alert-danger fade in'>{{msg}}</span>",
             controller: function($scope){
                 $scope.msg="";
             }
