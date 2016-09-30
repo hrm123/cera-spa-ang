@@ -12,10 +12,13 @@
                 onRemove:"&",
                 msg:"<"
             },
-            template:"<div class='row' ng-repeat='item in itemsFound'> <div class='col-sm-12'> {{item.name}}, {{item.short_name}} , {{item.description}} </div> </div> <div class='row' ng-hide='nidCtrl.msg.length===0' ><div class='col-sm-3'>{{msg}}</div></div>",
+            template:"<div class='row' ng-repeat='item in itemsFound'> <div class='col-sm-12'> {{item.name}}, {{item.short_name}} , {{item.description}} <input type='button' ng-click='removeItem($index)'>Dont want this one!</input> </div> </div> <div class='row' ng-hide='nidCtrl.msg.length===0' ><div class='col-sm-3'>{{msg}}</div></div>",
             controller: function($scope){
                 debugger;
-                //$scope.msg="";
+                $scope.removeItem=function(removeIndex){
+                    debugger;
+                    $scope.onRemove({index:removeIndex});
+                };
             }
         }
         return ddo;
