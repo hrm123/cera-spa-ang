@@ -15,7 +15,7 @@
             template:"<div class='row' ng-repeat='item in itemsFound'> <div class='col-sm-12'> {{item.name}}, {{item.short_name}} , {{item.description}} <input type='button' ng-click='removeItem($index)' title='Dont want this one!'></input> </div> </div> <div class='row' ng-hide='nidCtrl.msg.length===0' ><div class='col-sm-3'>{{msg}}</div></div>",
             controller: function($scope){
                 $scope.removeItem=function(removeIndex){
-                    $scope.onRemove({index:removeIndex});
+                    $scope.onRemove({itemIndex:removeIndex});
                 };
             }
         }
@@ -42,7 +42,7 @@
         }
         
         ctrl.removeItem = function(itemIndex){
-           ctrl.foundItems.splice( itemIndex,1);
+           ctrl.foundItems.splice( itemIndex+1,1);
         }
     }
     
