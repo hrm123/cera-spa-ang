@@ -11,7 +11,7 @@
         ctrl.items=[];
         MenuDataService.getAllCategories().then(function(data) {
              debugger; 
-             ctrl.categories = data;
+             ctrl.categories = angular.copy(data);
             });
     }
 
