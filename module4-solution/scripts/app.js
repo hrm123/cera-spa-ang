@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    var app = angular.module('NarrowItDownApp',[]);
+    var app = angular.module('MenuApp',['data','ngRoute']);
     app.controller('NarrowItDownController', narrowItDownController);
     app.factory('MenuSearchService', menuSearchSvc);
     app.directive("foundItems", foundItemsWidget);
