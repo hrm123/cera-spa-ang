@@ -1,11 +1,11 @@
 ( function(){
     var app = angular.module('MenuApp');
-    app.factory('MenuDataService', MenuDataService);
+    app.factory('MenuDataService', menuDataService);
 
     var dataModule = angular.module('data');
     dataModule.factory('MenuSearchService', menuDataService);
 
-    nenuDataService.$inject = ['$http'];
+    menuDataService.$inject = ['$http'];
     function menuDataService($http){
         var svc = {};
                      
