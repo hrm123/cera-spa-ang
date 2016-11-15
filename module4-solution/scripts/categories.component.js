@@ -7,7 +7,7 @@
          },
          controllerAs: '$ctrl',
          bindToController: true,
-         controller: menuCategoriesController
+         controller: 'menuCategoriesController'
      });
 
      function menuCategoriesController(){
