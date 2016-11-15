@@ -6,7 +6,6 @@
              categoryData:'<'
          },
          controllerAs: '$ctrl',
-         bindToController: true,
          controller: menuCategoriesController
      });
 
