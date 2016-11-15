@@ -6,6 +6,17 @@
              categoryData:'<'
          },
          controllerAs: '$ctrl',
-         bindToController: true
+         bindToController: true,
+         controller: menuCategoriesController
      });
+
+     function menuCategoriesController(){
+         this.$onInit = function() {
+            debugger;  
+         };
+
+        this.$onChanges = function (changesObj) {
+            debugger;
+        };
+     }
 })();
