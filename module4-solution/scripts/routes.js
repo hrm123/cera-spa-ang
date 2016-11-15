@@ -7,7 +7,7 @@
     function routesConfig($stateProvider, $urlRouterProvider) {
 
     // Redirect to tab 1 if no other URL matches
-    $urlRouterProvider.otherwise('/cera-spa-ang/module4-solution/home');
+    $urlRouterProvider.otherwise('/home');
 
     // Set up UI states
     $stateProvider
