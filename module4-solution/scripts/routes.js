@@ -12,20 +12,20 @@
     // Set up UI states
     $stateProvider
         .state('items', {
-        url: '/cera-spa-ang/module4-solution/items/:categoryName',
-        templateUrl: 'items.html',
+        url: '/items/:categoryName',
+        templateUrl: '/cera-spa-ang/module4-solution/items.html',
         controller: 'MenuController as ctrl'
         })
 
         .state('categories', {
-        url: '/cera-spa-ang/module4-solution/categories',
-        templateUrl: 'categories.html',
+        url: '/categories',
+        templateUrl: '/cera-spa-ang/module4-solution/categories.html',
         controller: 'MenuController as ctrl'
         })
 
         .state('home', {
-        url: '/cera-spa-ang/module4-solution/home',
-        templateUrl: 'home.html',
+        url: '/home',
+        templateUrl: '/cera-spa-ang/module4-solution/home.html',
         controller: 'MenuController as ctrl'
         });
     }
