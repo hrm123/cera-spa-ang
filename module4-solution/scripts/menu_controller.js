@@ -3,9 +3,9 @@
     app.controller('MenuController', menuController);
 
 
-    menuController.$inject = ["$http","MenuDataService"];
+    menuController.$inject = ["$http","MenuDataService","$scope"];
     
-    function menuController($http,MenuDataService){
+    function menuController($http,MenuDataService,$scope){
         var ctrl = this;
         ctrl.categories= [];
         ctrl.items=[];
