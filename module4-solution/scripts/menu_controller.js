@@ -7,11 +7,11 @@
     
     function menuController($http,MenuDataService){
         var ctrl = this;
-        ctrl.categories= [];
+        ctrl.categories= {'data' : []};
         ctrl.items=[];
         MenuDataService.getAllCategories().then(function(data) {
              debugger; 
-             ctrl.categories = angular.copy(data);
+             ctrl.categories = { 'data' : angular.copy(data) };
             });
     }
 
