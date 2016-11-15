@@ -12,6 +12,7 @@
         MenuDataService.getAllCategories().then(function(data) {
              debugger; 
              ctrl.categories = angular.copy(data);
+             $scope.$apply();
             });
     }
 
