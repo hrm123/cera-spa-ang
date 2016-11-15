@@ -3,7 +3,7 @@
     app.controller('MenuController', menuController);
 
 
-    MenuController.$inject = ["$http"];
+    menuController.$inject = ["$http"];
     
     function menuController($http){
         var ctrl = this;

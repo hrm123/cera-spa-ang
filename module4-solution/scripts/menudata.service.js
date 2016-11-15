@@ -3,10 +3,10 @@
     app.factory('MenuDataService', MenuDataService);
 
     var dataModule = angular.module('data');
-    dataModule.factory('MenuSearchService', MenuDataService);
+    dataModule.factory('MenuSearchService', menuDataService);
 
-    MenuDataService.$inject = ['$http'];
-    function MenuDataService($http){
+    nenuDataService.$inject = ['$http'];
+    function menuDataService($http){
         var svc = {};
                      
         svc.getAllCategories = function()
