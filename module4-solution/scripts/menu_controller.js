@@ -3,16 +3,15 @@
     app.controller('MenuController', menuController);
 
 
-    menuController.$inject = ["$http","MenuDataService","$scope"];
+    menuController.$inject = ["$http","MenuDataService"];
     
-    function menuController($http,MenuDataService,$scope){
+    function menuController($http,MenuDataService){
         var ctrl = this;
         ctrl.categories= [];
         ctrl.items=[];
         MenuDataService.getAllCategories().then(function(data) {
              debugger; 
              ctrl.categories = angular.copy(data);
-             $scope.$apply();
             });
     }
 
