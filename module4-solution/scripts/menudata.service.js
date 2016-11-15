@@ -15,7 +15,7 @@
                 // process result and only keep items that match
                 //var foundItems = result.data.menu_items.filter( function( item ) { return item.description.indexOf(searchTerm) >0; } )
                 // return processed items
-                return result;
+                return result.data;
             });
         }
 
@@ -25,7 +25,7 @@
                 // process result and only keep items that match
                 //var foundItems = result.data.menu_items.filter( function( item ) { return item.description.indexOf(searchTerm) >0; } )
                 // return processed items
-                return result;
+                return result.data;
             });
         }
 
