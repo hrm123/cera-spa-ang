@@ -1,5 +1,5 @@
 ( function(){
 
     var dataModule = angular.module('data',[]);
-    dataModule.actory('MenuSearchService', MenuDataService);
+    dataModule.factory('MenuSearchService', MenuDataService);
 })();

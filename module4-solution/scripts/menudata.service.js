@@ -1,4 +1,9 @@
 ( function(){
+    var app = angular.module('MenuApp');
+    app.factory('MenuDataService', MenuDataService);
+
+    var dataModule = angular.module('data');
+    dataModule.factory('MenuSearchService', MenuDataService);
 
     MenuDataService.$inject = ['$http'];
     function MenuDataService($http){
