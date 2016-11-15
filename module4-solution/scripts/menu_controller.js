@@ -9,7 +9,7 @@
         var ctrl = this;
         ctrl.categories= [];
         ctrl.items=[];
-        MenuSearchService.getAllCategories().then(function(data) {
+        MenuDataService.getAllCategories().then(function(data) {
              debugger; 
              ctrl.categories = data;
             });
