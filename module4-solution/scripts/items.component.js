@@ -6,6 +6,20 @@
              itemsData:'<'
          },
          controllerAs: '$ctrl',
-         bindToController: true
+         bindToController: true,
+        controller: categoryItemsController
      });
+
+     function menuCategoriesController(){
+         var ctrl = this;
+         /*
+         ctrl.$onInit = function() {
+            debugger;  
+         };
+         */
+        ctrl.$onChanges = function (changesObj) {
+            debugger;
+        };
+        
+     }
 })();
