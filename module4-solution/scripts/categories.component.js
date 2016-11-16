@@ -11,6 +11,7 @@
 
      function menuCategoriesController(){
          var ctrl = this;
+         /*
          ctrl.$onInit = function() {
             debugger;  
          };
@@ -18,5 +19,6 @@
         ctrl.$onChanges = function (changesObj) {
             debugger;
         };
+        */
      }
 })();

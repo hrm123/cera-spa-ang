@@ -10,6 +10,8 @@
         ctrl.categories= {'data' : []};
         ctrl.items=[];
         ctrl.pfx  = 'pfx1';
+
+        /*
         $scope.$watch(angular.bind(this,function(){
             return this.categories;
         }), function(newVal){
@@ -21,9 +23,9 @@
         }), function(newVal){
             debugger;
         }); 
+        */
 
         MenuDataService.getAllCategories().then(function(data) {
-             debugger; 
              ctrl.pfx  = 'pfx2';
              ctrl.categories = { 'data' : angular.copy(data) };
             });
