@@ -16,7 +16,7 @@
         if($stateParams.categoryName){
             debugger;
            MenuDataService.getItemsForCategory($stateParams.categoryName).then(function(data){
-               ctrl.items = data; 
+               ctrl.items = angular.copy(data); 
             }
            )};
         } 

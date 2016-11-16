@@ -5,8 +5,6 @@
          bindings:{
              itemsData:'<'
          },
-         controllerAs: '$ctrl',
-         bindToController: true,
         controller: categoryItemsController
      });
 
