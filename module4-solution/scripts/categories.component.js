@@ -1,9 +1,10 @@
 (function(){
      var app = angular.module('MenuApp');
      app.component('menuCategories',{
-         template: "<ul ng-repeat='item in $ctrl.categoryData.data'><li>item.name</li></ul>",
+         template: "{{prefix}} <ul ng-repeat='item in $ctrl.categoryData.data'><li>item.name</li></ul>",
          bindings:{
-             categoryData:'<'
+             categoryData:'<',
+             prefix : '<'
          },
          controller: menuCategoriesController
      });
