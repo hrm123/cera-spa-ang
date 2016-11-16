@@ -15,7 +15,7 @@
             });
         if($stateParams.categoryName){
            MenuDataService.getItemsForCategory($stateParams.categoryName).then(function(data){
-               ctrl.items =  { 'data' : angular.copy(data)}; 
+               ctrl.items = data; 
             }
            )};
         } 
