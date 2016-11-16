@@ -5,16 +5,16 @@
          bindings:{
              categoryData:'<'
          },
-         controllerAs: '$ctrl',
          controller: menuCategoriesController
      });
 
      function menuCategoriesController(){
-         this.$onInit = function() {
+         var ctrl = this;
+         ctrl.$onInit = function() {
             debugger;  
          };
 
-        this.$onChanges = function (changesObj) {
+        ctrl.$onChanges = function (changesObj) {
             debugger;
         };
      }
