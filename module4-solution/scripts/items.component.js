@@ -10,7 +10,7 @@
         controller: categoryItemsController
      });
 
-     function menuCategoriesController(){
+     function categoryItemsController(){
          var ctrl = this;
          /*
          ctrl.$onInit = function() {
