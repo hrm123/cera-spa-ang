@@ -14,10 +14,11 @@
          ctrl.$onInit = function() {
             debugger;  
          };
-         */
+         
         ctrl.$onChanges = function (changesObj) {
             debugger;
         };
+        */
         
         
      }
