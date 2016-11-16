@@ -1,7 +1,7 @@
 (function(){
      var app = angular.module('MenuApp');
      app.component('items',{
-         template: "<ul ng-repeat='item in $ctrl.itemsdata.menu_items'><li>{{getItemDisplayName(item)}}</li></ul>",
+         template: "<ul ng-repeat='item in $ctrl.itemsdata.menu_items'><li>{{$ctrl.getItemDisplayName(item)}}</li></ul>",
          bindings:{
              itemsdata:'<'
          },
