@@ -3,8 +3,7 @@
      app.component('menuCategories',{
          template: "<ul ng-repeat='item in $ctrl.categorydata.data'><li>{{item.name}}</li></ul>",
          bindings:{
-             categorydata:'<',
-             prefix : '<'
+             categorydata:'<'
          },
          controller: menuCategoriesController
      });
