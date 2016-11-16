@@ -9,10 +9,10 @@
         var ctrl = this;
         ctrl.categories= {'data' : []};
         ctrl.items=[];
-        this.pfx  = 'pfx1';
+        ctrl.pfx  = 'pfx1';
         MenuDataService.getAllCategories().then(function(data) {
              debugger; 
-             this.pfx  = 'pfx2';
+             ctrl.pfx  = 'pfx2';
              ctrl.categories = { 'data' : angular.copy(data) };
             });
     }

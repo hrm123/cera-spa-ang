@@ -14,13 +14,13 @@
         .state('items', {
         url: '/items/:categoryName',
         templateUrl: '/cera-spa-ang/module4-solution/items.html',
-        controller: 'MenuController as ctrl'
+        controller: 'MenuController as ctrl1'
         })
 
         .state('categories', {
         url: '/categories',
         templateUrl: '/cera-spa-ang/module4-solution/categories.html',
-        controller: 'MenuController as ctrl'
+        controller: 'MenuController as ctrl2'
         })
 
         .state('home', {
