@@ -8,7 +8,7 @@
     function menuController($http,MenuDataService,$scope,$stateParams){
         var ctrl = this;
         ctrl.categories= {'data' : []};
-        ctrl.items=[];
+        ctrl.items={'data' : []};
 
         MenuDataService.getAllCategories().then(function(data) {
              ctrl.categories = { 'data' : angular.copy(data) };
@@ -16,7 +16,7 @@
         if($stateParams.categoryName){
             debugger;
            MenuDataService.getItemsForCategory($stateParams.categoryName).then(function(data){
-               ctrl.items = angular.copy(data); 
+               ctrl.items =  { 'data' : angular.copy(data)}; 
             }
            )};
         } 
