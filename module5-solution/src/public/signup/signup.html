@@ -9,11 +9,11 @@
         ng-model="ctrl.userPrefs.lastName" style="background-color :black;  "
         required min-length="4" max-length="10"/>
         <span
-            ng-show="(regForm.lastName.$error.minlength || regForm.lastName.$error.required)
-             && regForm.lastName.$touched">
+            ng-show="(signupForm.lastName.$error.minlength || signupForm.lastName.$error.required)
+             && signupForm.lastName.$touched">
             Last name must be at least 4 characters long
           </span>
-          <span ng-show="regForm.lastName.$error.maxlength && regForm.lastName.$touched">
+          <span ng-show="signupForm.lastName.$error.maxlength && signupForm.lastName.$touched">
             Last name must not be longer than 10 characters
           </span>
     </div>
