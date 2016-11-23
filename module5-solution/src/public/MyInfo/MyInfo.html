@@ -1,21 +1,19 @@
 
 <div class="container" ng-show="ctrl.showPrefs===true">
     <div class="row">
-        <input style="bg" type="text" name="firstName" placeholder="Enter firstname:" ng-model="ctrl.userPrefs.firstName" 
-        ng-required ng-min-length="ctrl.userPrefs.firsNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
+        {{ctrl.userPrefs.firstName}}
     </div>
     <div class="row">
-        <input type="text" name="lastName" placeholder="Enter lastname:" ng-model="ctrl.userPrefs.lastName" 
-        ng-required ng-min-length="ctrl.userPrefs.lastNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
+        {{ctrl.userPrefs.lastName}}
     </div>
     <div class="row">        
-        <input type="email" name="email" placeholder="Enter email:" ng-model="ctrl.userPrefs.email"/>
+        {{ctrl.userPrefs.email}}
     </div>
     <div class="row">        
-        <input type="phone" name="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.userPrefs.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
+        {{ctrl.userPrefs.phone"}}
     </div>
     <div class="row">        
-        <input type="favorite menu"  placeholder="favorite menu item:" ng-model="ctrl.userPrefs.menuNumber"/>
+        {{ctrl.userPrefs.menuNumber}}
     </div>
 </div>
 <div class="container" ng-hide="ctrl.showPrefs">
