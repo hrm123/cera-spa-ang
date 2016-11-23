@@ -4,9 +4,12 @@
 angular.module('public')
 .controller('signUpController', SignUpController);
 
-//SignUpController.$inject = ['menuItems'];
-function SignUpController() {
+SignUpController.$inject = ['MenuService'];
+
+function SignUpController(MenuService) {
   var $ctrl = this;
+
+  /*
   $ctrl.firstName = '';
   $ctrl.lastName = '';
   $ctrl.firsNameLen = 4;
@@ -15,6 +18,26 @@ function SignUpController() {
   $ctrl.email = '';
   $ctrl.phone = '';
   $ctrl.menuNumber = '';
+  */
+
+  var userPrefs = MenuService.getUserPrefs();
+  if(!userPrefs){
+    userprefs ={
+        'firstName' : '',
+        'lastName': '',
+        'firsNameLen' :4,
+        'lastNameLen':4,
+        'maxLenName':20,
+        'email':'',
+        'phone':'',
+        menuNumber:''
+    };
+  }
+  $ctrl.userPrefs = userPrefs;
+
+  $ctrl.submit = function(){
+      MenuService.storeUserPrefs(userPrefs);
+  }
 }
 
 })();

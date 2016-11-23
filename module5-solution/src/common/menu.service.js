@@ -15,6 +15,25 @@ function MenuService($http, ApiPath) {
     });
   };
 
+  service.storeUserPrefs = function(userPrefsJson){
+    if (typeof (Storage) !== "undefined")
+    {
+        localStorage.setItem("userprefs", userPrefsJson);
+    }
+    else{
+      Console.log("No support for local storage");
+    }
+  }
+
+  service.getUserPrefs = function(){
+    if (typeof (Storage) !== "undefined")
+    {
+        return localStorage.getItem("userprefs");
+    }
+    else{
+      Console.log("No support for local storage");
+    }
+  }
 
   service.getMenuItems = function (category) {
     var config = {};
