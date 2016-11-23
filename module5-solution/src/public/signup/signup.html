@@ -1,12 +1,20 @@
-<form name="signupForm" id="signupForm" novalidate class="container">
+<form name="signupForm"  novalidate class="container">
     <div class="row">
         First Name* : <input style="bg" type="text" name="firstName" placeholder="Enter firstname:"
          ng-model="ctrl.userPrefs.firstName" 
-        ng-required ng-min-length="ctrl.userPrefs.firsNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
+        ng-required="true" ng-min-length="ctrl.userPrefs.firsNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
     </div>
     <div class="row">
-        Last Name* :<input type="text" name="lastName" placeholder="Enter lastname:" ng-model="ctrl.userPrefs.lastName" 
-        ng-required ng-min-length="4" ng-max-length="10"/>
+        Last Name* :<input type="text" name="lastName" placeholder="Enter lastname:" 
+        ng-model="ctrl.userPrefs.lastName" 
+        required min-length="4" max-length="10"/>
+        <span
+            ng-if="(regForm.lastName.$error.minlength || regForm.lastName.$error.required) && regForm.lastName.$touched">
+            Last name must be at least 4 characters long
+          </span>
+          <span ng-if="regForm.lastName.$error.maxlength && regForm.lastName.$touched">
+            Last name must not be longer than 10 characters
+          </span>
     </div>
     <div class="row">        
         Email* :<input type="email" name="email" placeholder="Enter email:" ng-model="ctrl.userPrefs.email"/>
