@@ -2,7 +2,7 @@
 "use strict";
 
 angular.module('public')
-.controller('signupController', SignUpController);
+.controller('signUpController', SignUpController);
 
 //SignUpController.$inject = ['menuItems'];
 function SignUpController(menuItems) {
