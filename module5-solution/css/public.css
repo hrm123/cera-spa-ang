@@ -193,8 +193,6 @@ h3.menu-item-title {
 }
 
 
-form#signupForm input[type="text"], button {
-
+form#signupForm input, button {
   background-color :black; 
-
 }
