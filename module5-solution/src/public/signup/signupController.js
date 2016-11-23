@@ -8,6 +8,8 @@ SignUpController.$inject = ['MenuService'];
 
 function SignUpController(MenuService) {
   var $ctrl = this;
+  $ctrl.saveSucess = false;
+  $ctrl.serverError = false;
   var userPrefs = MenuService.getUserPrefs();
   if(!userPrefs){
     userPrefs ={
@@ -24,7 +26,7 @@ function SignUpController(MenuService) {
   $ctrl.userPrefs = userPrefs;
 
   $ctrl.submit = function(userprefs){
-      MenuService.storeUserPrefs(userPrefs);
+      $ctrl.saveSucess = MenuService.storeUserPrefs(userPrefs)
   }
 }
 
