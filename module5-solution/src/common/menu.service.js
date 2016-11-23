@@ -19,19 +19,25 @@ function MenuService($http, ApiPath) {
     if (typeof (Storage) !== "undefined")
     {
         localStorage.setItem("userprefs", JSON.stringify(userPrefsJson));
+        return true;
     }
     else{
       Console.log("No support for local storage");
+      return false;
     }
   }
 
   service.getUserPrefs = function(){
     if (typeof (Storage) !== "undefined")
     {
+      if(localStorage.getItem("userprefs")){
         return JSON.parse(localStorage.getItem("userprefs"));
+      }
+
     }
     else{
       Console.log("No support for local storage");
+      return null;
     }
   }
 
