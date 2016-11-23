@@ -16,7 +16,7 @@ function MenuService($http, ApiPath) {
   };
 
   service.storeUserPrefs = function(userPrefsJson){
-    if (typeof (Storage) !== "undefined")
+    if (typeof (Storage) !== "undefined" && userPrefsJson)
     {
         localStorage.setItem("userprefs", JSON.stringify(userPrefsJson));
         return true;
@@ -30,8 +30,9 @@ function MenuService($http, ApiPath) {
   service.getUserPrefs = function(){
     if (typeof (Storage) !== "undefined")
     {
-      if(localStorage.getItem("userprefs")){
-        return JSON.parse(localStorage.getItem("userprefs"));
+      var up = localStorage.getItem("userprefs");
+      if(up){
+        return JSON.parse(up);
       }
 
     }
