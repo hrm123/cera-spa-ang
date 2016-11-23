@@ -8,18 +8,6 @@ SignUpController.$inject = ['MenuService'];
 
 function SignUpController(MenuService) {
   var $ctrl = this;
-
-  /*
-  $ctrl.firstName = '';
-  $ctrl.lastName = '';
-  $ctrl.firsNameLen = 4;
-  $ctrl.lastNameLen = 4;
-  $ctrl.maxLenName =  20;
-  $ctrl.email = '';
-  $ctrl.phone = '';
-  $ctrl.menuNumber = '';
-  */
-
   var userPrefs = MenuService.getUserPrefs();
   if(!userPrefs){
     userPrefs ={

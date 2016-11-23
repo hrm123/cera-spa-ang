@@ -8,10 +8,10 @@
         ng-required ng-min-length="ctrl.userPrefs.lastNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
     </div>
     <div class="row">        
-        *<input type="email"  placeholder="Enter email:" ng-model="ctrl.userPrefs.email"/>
+        *<input type="email" name="email" placeholder="Enter email:" ng-model="ctrl.userPrefs.email"/>
     </div>
     <div class="row">        
-        *<input type="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.userPrefs.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
+        *<input type="phone" name="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.userPrefs.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
     </div>
     <div class="row">        
         *<input type="favorite menu"  placeholder="favorite menu item:" ng-model="ctrl.userPrefs.menuNumber"/>
@@ -37,7 +37,7 @@
         </span>
         <span ng-if="(signupForm.firstName.$error.minlength || signupForm.firstName.$error.required) 
                 && signupForm.firstName.$touched")>
-            firstname should be between {{ctrl.userPrefs.firsNameLen}} and {[ctrl.userPrefs.maxLenName}} characters.
+            firstname should be between {{ctrl.userPrefs.firsNameLen}} and {{ctrl.userPrefs.maxLenName}} characters.
         </span>
     </div>
     <div class="row">   
