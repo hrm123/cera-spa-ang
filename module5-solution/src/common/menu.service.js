@@ -28,7 +28,7 @@ function MenuService($http, ApiPath) {
   service.getUserPrefs = function(){
     if (typeof (Storage) !== "undefined")
     {
-        return JSON.pase(localStorage.getItem("userprefs"));
+        return JSON.parse(localStorage.getItem("userprefs"));
     }
     else{
       Console.log("No support for local storage");
