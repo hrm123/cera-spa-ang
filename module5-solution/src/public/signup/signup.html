@@ -1,20 +1,20 @@
 <form name="signupForm" id="signupForm" novalidate class="container">
     <div class="row">
-        *<input style="bg" type="text" name="firstName" placeholder="Enter firstname:" ng-model="ctrl.userPrefs.firstName" 
+        First Name* : <input style="bg" type="text" name="firstName" placeholder="Enter firstname:" ng-model="ctrl.userPrefs.firstName" 
         ng-required ng-min-length="ctrl.userPrefs.firsNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
     </div>
     <div class="row">
-        *<input type="text" name="lastName" placeholder="Enter lastname:" ng-model="ctrl.userPrefs.lastName" 
+        Last Name* :<input type="text" name="lastName" placeholder="Enter lastname:" ng-model="ctrl.userPrefs.lastName" 
         ng-required ng-min-length="ctrl.userPrefs.lastNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
     </div>
     <div class="row">        
-        *<input type="email" name="email" placeholder="Enter email:" ng-model="ctrl.userPrefs.email"/>
+        Email* :<input type="email" name="email" placeholder="Enter email:" ng-model="ctrl.userPrefs.email"/>
     </div>
     <div class="row">        
-        *<input type="phone" name="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.userPrefs.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
+        Phone* :<input type="phone" name="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.userPrefs.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
     </div>
     <div class="row">        
-        *<input type="favorite menu"  placeholder="favorite menu item:" ng-model="ctrl.userPrefs.menuNumber"/>
+        Favorite Menu* :<input type="favorite menu"  placeholder="favorite menu item:" ng-model="ctrl.userPrefs.menuNumber"/>
     </div>
     <div class="row">        
         <span ng-if="signupForm.firstName.$error.maxlength && signupForm.firstName.$touched">
@@ -45,5 +45,5 @@
     </div>
 </form>
 <div class="row"
-<span ng-if"ctrl.saveSucess" class="success">Your information has been saved</span></div>
-<span ng-if"ctrl.serverError" class="danger">Invalid menu item... please retry.</span></div>
+<span ng-show"ctrl.saveSucess" class="success">Your information has been saved</span></div>
+<span ng-show"ctrl.serverError" class="danger">Invalid favorite menu item... please retry.</span></div>
