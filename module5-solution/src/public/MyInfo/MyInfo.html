@@ -1,5 +1,5 @@
 
-<div class="container" ng-if="showPrefs">
+<div class="container" ng-show="ctrl.showPrefs===true">
     <div class="row">
         <input style="bg" type="text" name="firstName" placeholder="Enter firstname:" ng-model="ctrl.userPrefs.firstName" 
         ng-required ng-min-length="ctrl.userPrefs.firsNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
@@ -18,6 +18,6 @@
         <input type="favorite menu"  placeholder="favorite menu item:" ng-model="ctrl.userPrefs.menuNumber"/>
     </div>
 </div>
-<div class="container" ng-if="!showPrefs">
+<div class="container" ng-hide="ctrl.showPrefs">
     Not Signed Up Yet. <a ui-sref="public.signup"> Sign up Now!</a>
 </div>
