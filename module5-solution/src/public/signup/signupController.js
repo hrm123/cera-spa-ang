@@ -22,7 +22,7 @@ function SignUpController(MenuService) {
 
   var userPrefs = MenuService.getUserPrefs();
   if(!userPrefs){
-    userprefs ={
+    userPrefs ={
         'firstName' : '',
         'lastName': '',
         'firsNameLen' :4,
@@ -35,7 +35,7 @@ function SignUpController(MenuService) {
   }
   $ctrl.userPrefs = userPrefs;
 
-  $ctrl.submit = function(){
+  $ctrl.submit = function(userprefs){
       MenuService.storeUserPrefs(userPrefs);
   }
 }
