@@ -1,4 +1,4 @@
-<form name="signupForm" novalidate>
+<form name="signupForm" novalidate >
         *<input type="text" name="firstName" placeholder="Enter firstname:" ng-model="ctrl.firstName" 
         ng-required ng-min-length="ctrl.firsNameLen" ng-max-length="ctrl.maxLenName"/>
         *<input type="text" name="lastName" placeholder="Enter lastname:" ng-model="ctrl.lastName" 
@@ -10,7 +10,7 @@
             first name is required and should be between {{ctrl.firsNameLen}} and {{ctrl.maxLenName}} characters.
         </span>
         <span ng-if="signupForm.lastName.$error.maxlength && signupForm.lastName.$touched">
-            last name is required and should be between {{ctrl.firsNameLen}} and {{ctrl.maxLenName}} characters.
+            last name is required and should be between {{ctrl.lastNameLen}} and {{ctrl.maxLenName}} characters.
         </span>
         <span ng-if="signupForm.phone.$error.required && signupForm.phone.$touched">
             phone is required
