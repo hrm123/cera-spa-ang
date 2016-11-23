@@ -191,3 +191,10 @@ h3.menu-item-title {
 .ng-touched.ng-invalid{
   border: 2px red solid
 }
+
+
+form#signupForm input[type="text"], button {
+
+  background-color :black; 
+
+}

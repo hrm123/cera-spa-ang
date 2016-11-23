@@ -1,11 +1,22 @@
-<form name="signupForm" novalidate >
-        *<input type="text" name="firstName" placeholder="Enter firstname:" ng-model="ctrl.firstName" 
+<form name="signupForm" id="signupForm" novalidate class="container">
+    <div class="row">
+        *<input style="bg" type="text" name="firstName" placeholder="Enter firstname:" ng-model="ctrl.firstName" 
         ng-required ng-min-length="ctrl.firsNameLen" ng-max-length="ctrl.maxLenName"/>
+    </div>
+    <div class="row">
         *<input type="text" name="lastName" placeholder="Enter lastname:" ng-model="ctrl.lastName" 
         ng-required ng-min-length="ctrl.lastNameLen" ng-max-length="ctrl.maxLenName"/>
+    </div>
+    <div class="row">        
         *<input type="email"  placeholder="Enter email:" ng-model="ctrl.email"/>
+    </div>
+    <div class="row">        
         *<input type="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
-        *<input type="favorite menu"  placeholder="Enter phone:" ng-model="ctrl.menuNumber"/>
+    </div>
+    <div class="row">        
+        *<input type="favorite menu"  placeholder="favorite menu item:" ng-model="ctrl.menuNumber"/>
+    </div>
+    <div class="row">        
         <span ng-if="signupForm.firstName.$error.maxlength && signupForm.firstName.$touched">
             first name is required and should be between {{ctrl.firsNameLen}} and {{ctrl.maxLenName}} characters.
         </span>
@@ -28,6 +39,8 @@
                 && signupForm.firstName.$touched")>
             firstname should be between {{ctrl.firsNameLen}} and {[ctrl.maxLenName}} characters.
         </span>
-        
+    </div>
+    <div class="row">   
         <button ng-disabled="signupForm.$invalid"  type="submit" ng-click="ctrl.submit()">Submit</button>
+    </div>
 </form>
