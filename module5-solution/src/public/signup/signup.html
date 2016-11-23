@@ -1,1 +1,27 @@
-please sign up
+<form name="signupForm" novalidate>
+        *<input type="text" name="firstName" placeholder="Enter firstname:" ng-model="ctrl.firstName" 
+        ng-required ng-min-length="ctrl.firsNameLen" ng-max-length="ctrl.maxLenName"/>
+        *<input type="text" name="lastName" placeholder="Enter lastname:" ng-model="ctrl.lastName" 
+        ng-required ng-min-length="ctrl.lastNameLen" ng-max-length="ctrl.maxLenName"/>
+        *<input type="email"  placeholder="Enter email:" ng-model="ctrl.email"/>
+        *<input type="phone"  placeholder="Enter phone:" ng-model="ctrl.phone"/>
+        *<input type="favorite menu"  placeholder="Enter phone:" ng-model="ctrl.menuNumber"/>
+        <span ng-if="signupForm.firstName.$error.maxlength && signupForm.firstName.$touched">
+            first name is required and should be between {{ctrl.firsNameLen}} and {{ctrl.maxLenName}} characters.
+        </span>
+        <span ng-if="signupForm.lastName.$error.maxlength && signupForm.lastName.$touched">
+            last name is required and should be between {{ctrl.firsNameLen}} and {{ctrl.maxLenName}} characters.
+        </span>
+        <span ng-if="signupForm.phone.$error.required && signupForm.phone.$touched">
+            phone is required
+        </span>
+        <span ng-if="signupForm.email.$error.required && signupForm.email.$touched">
+            email is required
+        </span>
+        <span ng-if="(signupForm.firstName.$error.minlength || signupForm.firstName.$error.required) 
+                && signupForm.firstName.$touched")>
+            firstname should be between {{ctrl.firsNameLen}} and {[ctrl.maxLenName}} characters.
+        </span>
+        
+        <button type="submit" ng-click="ctrl.submit()">Submit</button>
+</form>
