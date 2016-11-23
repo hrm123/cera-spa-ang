@@ -4,7 +4,7 @@
         *<input type="text" name="lastName" placeholder="Enter lastname:" ng-model="ctrl.lastName" 
         ng-required ng-min-length="ctrl.lastNameLen" ng-max-length="ctrl.maxLenName"/>
         *<input type="email"  placeholder="Enter email:" ng-model="ctrl.email"/>
-        *<input type="phone"  placeholder="Enter phone:" ng-model="ctrl.phone"/>
+        *<input type="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
         *<input type="favorite menu"  placeholder="Enter phone:" ng-model="ctrl.menuNumber"/>
         <span ng-if="signupForm.firstName.$error.maxlength && signupForm.firstName.$touched">
             first name is required and should be between {{ctrl.firsNameLen}} and {{ctrl.maxLenName}} characters.
@@ -18,10 +18,16 @@
         <span ng-if="signupForm.email.$error.required && signupForm.email.$touched">
             email is required
         </span>
+        <span ng-if="signupForm.email.$invalid  && signupForm.email.$touched">
+            Must be a valid email address: handle@domain format
+        </span>
+        <span ng-if="signupForm.phone.$invalid  && signupForm.phone.$touched">
+            Must be a valid phone : ###-###-####
+        </span>
         <span ng-if="(signupForm.firstName.$error.minlength || signupForm.firstName.$error.required) 
                 && signupForm.firstName.$touched")>
             firstname should be between {{ctrl.firsNameLen}} and {[ctrl.maxLenName}} characters.
         </span>
         
-        <button type="submit" ng-click="ctrl.submit()">Submit</button>
+        <button ng-disabled="signupForm.$invalid"  type="submit" ng-click="ctrl.submit()">Submit</button>
 </form>
