@@ -2,12 +2,20 @@
     <div class="row">
         First Name* : <input  type="text" name="firstName" placeholder="Enter firstname:"
          ng-model="ctrl.userPrefs.firstName" style="background-color :black;  "
-        ng-required="true" ng-min-length="ctrl.userPrefs.firsNameLen" ng-max-length="ctrl.userPrefs.maxLenName"/>
+        ng-required="true" ng-min-length="2" ng-max-length="20"/>
+        <span
+            ng-show="(signupForm.firstName.$error.minlength || signupForm.firstName.$error.required)
+             && signupForm.firstName.$touched">
+            Last name must be at least 4 characters long
+          </span>
+          <span ng-show="signupForm.firstName.$error.maxlength && signupForm.firstName.$touched">
+            Last name must not be longer than 10 characters
+          </span>
     </div>
     <div class="row">
         Last Name* :<input type="text" name="lastName" placeholder="Enter lastname:" 
         ng-model="ctrl.userPrefs.lastName" style="background-color :black;  "
-        required min-length="4" max-length="10"/>
+        required min-length="2" max-length="20"/>
         <span
             ng-show="(signupForm.lastName.$error.minlength || signupForm.lastName.$error.required)
              && signupForm.lastName.$touched">
