@@ -14,7 +14,7 @@ function SignUpController() {
   $ctrl.maxLenName =  20;
   $ctrl.email = '';
   $ctrl.phone = '';
-  $sctrl.menuNumber = '';
+  $ctrl.menuNumber = '';
 }
 
 })();
