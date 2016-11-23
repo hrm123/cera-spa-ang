@@ -5,7 +5,7 @@ angular.module('public')
 .controller('signUpController', SignUpController);
 
 //SignUpController.$inject = ['menuItems'];
-function SignUpController(menuItems) {
+function SignUpController() {
   var $ctrl = this;
   $ctrl.firstName = '';
   $ctrl.lastName = '';
