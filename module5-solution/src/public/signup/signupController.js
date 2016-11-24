@@ -26,7 +26,8 @@ function SignUpController(MenuService) {
   $ctrl.userPrefs = userPrefs;
 
   $ctrl.submit = function(){
-    if(!MenuService.getMenuItemsByName($ctrl.userPrefs.menuNumber))
+    var resp = MenuService.getMenuItemsByName($ctrl.userPrefs.menuNumber);
+    if(!resp)
     {
         $ctrl.saveSucess = false;
     }

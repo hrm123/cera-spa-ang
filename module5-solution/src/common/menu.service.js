@@ -18,7 +18,9 @@ function MenuService($http, ApiPath) {
    service.getMenuItemsByName = function (shortName) {
     return $http.get(ApiPath + '/menu_items/' + shortName + '.json').then(function (response) {
       return response.data;
-    }, function(err) { return null;});
+    }, function(err) { 
+      return null;
+    });
   };
 
   service.storeUserPrefs = function(userPrefsJson){
