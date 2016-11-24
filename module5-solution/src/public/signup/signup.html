@@ -4,11 +4,11 @@
          ng-model="ctrl.userPrefs.firstName" style="background-color :black;  "
         ng-required="true" ng-minlength="ctrl.userPrefs.firsNameLen" ng-maxlength="ctrl.userPrefs.maxLenName"/>
         <span
-            ng-show="(signupForm.lastName.$error.minlength || signupForm.lastName.$error.required)
-             && signupForm.lastName.$touched">
+            ng-show="(signupForm.firstName.$error.minlength || signupForm.firstName.$error.required)
+             && signupForm.firstName.$touched">
             First name must be at least {{ctrl.userPrefs.firsNameLen}} characters long
           </span>
-          <span ng-show="signupForm.lastName.$error.maxlength && signupForm.lastName.$touched">
+          <span ng-show="signupForm.firstName.$error.maxlength && signupForm.firstName.$touched">
             First name must not be longer than {{ctrl.userPrefs.maxLenName}} characters
           </span>
     </div>
@@ -26,38 +26,24 @@
           </span>
     </div>
     <div class="row">        
-        Email* :<input type="email" style="background-color :black;  " name="email" placeholder="Enter email:" ng-model="ctrl.userPrefs.email"/>
-    </div>
-    <div class="row">        
-        Phone* :<input type="phone" style="background-color :black;  " name="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.userPrefs.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
-    </div>
-    <div class="row">        
-        Favorite Menu* :<input type="favorite menu"  style="background-color :black;  " placeholder="favorite menu item:" ng-model="ctrl.userPrefs.menuNumber"/>
-    </div>
-    <div class="row">        
-        <span ng-if="signupForm.firstName.$error.maxlength && signupForm.firstName.$touched">
-            first name is required and should be between {{ctrl.userPrefs.firsNameLen}} and {{ctrl.userPrefs.maxLenName}} characters.
-        </span>
-        <span ng-if="signupForm.lastName.$error.maxlength && signupForm.lastName.$touched">
-            last name is required and should be between {{ctrl.userPrefs.lastNameLen}} and {{ctrl.userPrefs.maxLenName}} characters.
-        </span>
-        <span ng-if="signupForm.phone.$error.required && signupForm.phone.$touched">
-            phone is required
-        </span>
+        Email* :<input type="email" style="background-color :black;  " required name="email" placeholder="Enter email:" ng-model="ctrl.userPrefs.email"/>
         <span ng-if="signupForm.email.$error.required && signupForm.email.$touched">
             email is required
         </span>
         <span ng-if="signupForm.email.$invalid  && signupForm.email.$touched">
             Must be a valid email address: handle@domain format
         </span>
+    </div>
+    <div class="row">        
+        Phone* :<input type="phone" style="background-color :black;  " name="phone"  placeholder="Enter phone:###-###-####" ng-model="ctrl.userPrefs.phone" pattern="(\d{3})-(\d{3})-(\d{4})"/>
         <span ng-if="signupForm.phone.$invalid  && signupForm.phone.$touched">
             Must be a valid phone : ###-###-####
         </span>
-        <span ng-if="(signupForm.firstName.$error.minlength || signupForm.firstName.$error.required) 
-                && signupForm.firstName.$touched")>
-            firstname should be between {{ctrl.userPrefs.firsNameLen}} and {{ctrl.userPrefs.maxLenName}} characters.
-        </span>
     </div>
+    <div class="row">        
+        Favorite Menu* :<input type="favorite menu"  style="background-color :black;  " placeholder="favorite menu item:" ng-model="ctrl.userPrefs.menuNumber"/>
+    </div>
+    
     <div class="row">   
         <button ng-disabled="signupForm.$invalid"  type="submit" ng-click="ctrl.submit()">Submit</button>
     </div>
