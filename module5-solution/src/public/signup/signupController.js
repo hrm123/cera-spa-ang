@@ -30,9 +30,11 @@ function SignUpController(MenuService) {
         if(!d)
         {
             $ctrl.saveSucess = false;
+            $ctrl.serverError = true;
         }
         else{
-            $ctrl.saveSucess = MenuService.storeUserPrefs($ctrl.userPrefs)
+            $ctrl.saveSucess = MenuService.storeUserPrefs($ctrl.userPrefs);
+            $ctrl.serverError = false;
         }
     });
     
