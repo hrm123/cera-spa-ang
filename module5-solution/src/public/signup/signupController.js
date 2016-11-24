@@ -26,12 +26,12 @@ function SignUpController(MenuService) {
   $ctrl.userPrefs = userPrefs;
 
   $ctrl.submit = function(){
-    if(!MenuService.getMenuItemsByName(ctrl.userPrefs.menuNumber))
+    if(!MenuService.getMenuItemsByName($ctrl.userPrefs.menuNumber))
     {
         $ctrl.saveSucess = false;
     }
     else{
-        $ctrl.saveSucess = MenuService.storeUserPrefs(ctrl.userPrefs)
+        $ctrl.saveSucess = MenuService.storeUserPrefs($ctrl.userPrefs)
     }
   }
 }
