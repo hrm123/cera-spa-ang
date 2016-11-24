@@ -2,7 +2,7 @@
     <div class="row">
         First Name* : <input  type="text" name="firstName" placeholder="Enter firstname:"
          ng-model="ctrl.userPrefs.firstName" style="background-color :black;  "
-        ng-required="true" ng-min-length="2" ng-max-length="20"/>
+        ng-required="true" ng-minlength="2" ng-maxlength="20"/>
         <span
             ng-show="(signupForm.firstName.$error.minlength || signupForm.firstName.$error.required)
              && signupForm.firstName.$touched">
@@ -15,7 +15,7 @@
     <div class="row">
         Last Name* :<input type="text" name="lastName" placeholder="Enter lastname:" 
         ng-model="ctrl.userPrefs.lastName" style="background-color :black;  "
-        required min-length="2" max-length="20"/>
+        required ng-minlength="2" ng-maxlength="20"/>
         <span
             ng-show="(signupForm.lastName.$error.minlength || signupForm.lastName.$error.required)
              && signupForm.lastName.$touched">
