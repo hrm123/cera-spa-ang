@@ -20,13 +20,19 @@ function SignUpController(MenuService) {
         'maxLenName':20,
         'email':'',
         'phone':'',
-        menuNumber:''
+        'menuNumber':''
     };
   }
   $ctrl.userPrefs = userPrefs;
 
   $ctrl.submit = function(userprefs){
-      $ctrl.saveSucess = MenuService.storeUserPrefs(userPrefs)
+    if(!MenuService.getMenuItemsByName(userprefs.menuNumber))
+    {
+        $ctrl.saveSucess = false;
+    }
+    else{
+        $ctrl.saveSucess = MenuService.storeUserPrefs(userPrefs)
+    }
   }
 }
 
